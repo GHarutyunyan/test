@@ -1,0 +1,36 @@
+{
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/github-packages-ui-library.umd.js",
+  "module": "./dist/github-packages-ui-library.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/github-packages-ui-library.es.js",
+      "require": "./dist/github-packages-ui-library.umd.js"
+    }
+  },
+  "types": "./dist/types/index.d.ts",
+  "name": "ui-lib-v2",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && vue-tsc --emitDeclarationOnly && mv dist/src dist/types",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "path": "^0.12.7",
+    "vite-plugin-css-injected-by-js": "^3.4.0",
+    "vite-tsconfig-paths": "^4.3.1",
+    "vue": "^3.4.19"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.19",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "typescript": "^5.2.2",
+    "vite": "^5.1.4",
+    "vue-tsc": "^1.8.27"
+  }
+}
